@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 - Remedial IPA: Ketidakseimbangan pada Lapisan Bumi</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f0; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 780px; background: white; margin: 0 auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header { text-align: center; margin-bottom: 25px; border-bottom: 3px solid #795548; padding-bottom: 15px; }
+        .header h1 { margin: 0; color: #4e342e; font-size: 24px; }
+        .header p { margin: 5px 0 0 0; color: #6d4c41; font-weight: 500; }
+        .meta-table { width: 100%; margin-bottom: 25px; border-collapse: collapse; background: #efebe9; border-radius: 6px; overflow: hidden; }
+        .meta-table td { padding: 10px 15px; border: 1px solid #d7ccc8; font-size: 14px; }
+        .section-title { background: #d7ccc8; padding: 8px 12px; font-weight: bold; border-radius: 4px; margin-top: 20px; color: #4e342e; }
+        .petunjuk ol { margin: 5px 0; padding-left: 20px; font-size: 14px; color: #5d4037; line-height: 1.5; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #333; font-size: 14px; }
+        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
+        .soal-card { background: #fafafa; border-left: 5px solid #795548; padding: 15px 20px; margin-bottom: 25px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .soal-header { display: flex; justify-content: space-between; font-weight: bold; color: #4e342e; margin-bottom: 10px; border-bottom: 1px dashed #ddd; padding-bottom: 5px; }
+        .soal-teks { font-weight: 600; margin-bottom: 15px; line-height: 1.5; }
+        .wacana-box { background: #fff8e1; border-left: 4px solid #ffb300; padding: 12px 15px; margin-bottom: 15px; border-radius: 4px; font-size: 14px; line-height: 1.5; font-style: italic; color: #5d4037; }
+        .anak-soal { margin-bottom: 15px; }
+        .anak-soal label { font-weight: 500; color: #222; margin-bottom: 6px; }
+        textarea { width: 100%; height: 80px; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; resize: vertical; font-family: inherit; font-size: 14px; }
+        textarea:focus, input:focus { border-color: #795548; outline: none; box-shadow: 0 0 5px rgba(121,85,72,0.3); }
+        
+        /* Gaya Khusus Tabel Data Soal */
+        .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; background: white; }
+        .data-table th { background-color: #795548; color: white; padding: 8px; text-align: left; border: 1px solid #d7ccc8; }
+        .data-table td { padding: 7px 8px; border: 1px solid #e0e0e0; }
+        .data-table tr:nth-child(even) { background-color: #fcfbfb; }
+
+        button { width: 100%; background-color: #795548; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.2s; margin-top: 10px; }
+        button:hover { background-color: #4e342e; }
+        #status { margin-top: 20px; text-align: center; font-weight: bold; font-size: 16px; padding: 10px; border-radius: 6px; }
+        .footer-note { text-align: center; margin-top: 30px; font-style: italic; color: #e65100; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>TUGAS 4 — REMEDIAL IPA</h1>
+        <p>Ketidakseimbangan pada Lapisan Bumi</p>
+    </div>
+
+    <table class="meta-table">
+        <tr>
+            <td><strong>Mata Pelajaran:</strong> IPA</td>
+            <td><strong>Jenis Penilaian:</strong> Remedial</td>
+        </tr>
+        <tr>
+            <td><strong>Waktu:</strong> 75 Menit</td>
+            <td><strong>Total Poin:</strong> 100 Poin</td>
+        </tr>
+    </table>
+
+    <div class="section-title">PETUNJUK PENGERJAAN</div>
+    <div class="petunjuk">
+        <ol>
+            <li>Berdoalah sebelum mengerjakan soal.</li>
+            <li>Tuliskan identitas diri secara lengkap dan benar.</li>
+            <li>Baca setiap soal dan data yang disajikan dengan cermat sebelum menjawab.</li>
+            <li>Jawab setiap pertanyaan secara lengkap, runtut, dan sistematis.</li>
+            <li>Untuk soal hitungan: wajib tuliskan Diketahui, Ditanya, Rumus, dan Penyelesaian.</li>
+            <li>Gunakan data pada tabel yang tersedia sebagai acuan jawaban.</li>
+            <li>Boleh menggunakan referensi buku atau internet, TIDAK boleh meniru jawaban teman.</li>
+            <li>Kumpulkan tepat waktu sesuai instruksi guru.</li>
+        </ol>
+    </div>
+    <br>
+
+    <div class="section-title">IDENTITAS SISWA</div>
+    <br>
+    <div class="form-group">
+        <label for="namaSiswa">Nama Siswa:</label>
+        <input type="text" id="namaSiswa" placeholder="Ketik nama lengkap Anda...">
+    </div>
+
+    <div class="form-group">
+        <label for="kelasSiswa">Kelas / No. Absen:</label>
+        <input type="text" id="kelasSiswa" placeholder="Contoh: X TSM 2 / 08">
+    </div>
+    <br>
+
+    <div class="section-title">SOAL REMEDIAL</div>
+    <br>
+
+    <div class="soal-card">
+        <div class="soal-header">
+            <span>Soal 1: Struktur & Data Lapisan Bumi</span>
+            <span>20 Poin</span>
+        </div>
+        <div class="soal-teks">
+            Perhatikan tabel data lapisan-lapisan penyusun Bumi berikut ini untuk menjawab pertanyaan di bawah:
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Lapisan</th>
+                    <th>Kedalaman (km)</th>
+                    <th>Suhu (°C)</th>
+                    <th>Wujud</th>
+                    <th>Komposisi Utama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Kerak Benua</td><td>0 – 70</td><td>0 – 400</td><td>Padat</td><td>Granit, SiO2, Al</td></tr>
+                <tr><td>Kerak Samudra</td><td>0 – 10</td><td>0 – 200</td><td>Padat</td><td>Basalt, SiO2, Mg</td></tr>
+                <tr><td>Mantel Atas</td><td>70 – 400</td><td>400 – 1.000</td><td>Padat/Plastis</td><td>Peridotit, Olivin</td></tr>
+                <tr><td>Mantel Bawah</td><td>400 – 2.900</td><td>1.000 – 3.700</td><td>Padat</td><td>Silikat Mg & Fe</td></tr>
+                <tr><td>Inti Luar</td><td>2.900 – 5.100</td><td>3.700 – 5.000</td><td>Cair</td><td>Besi & Nikel cair</td></tr>
+                <tr><td>Inti Dalam</td><td>5.100 – 6.371</td><td>5.000 – 6.000</td><td>Padat</td><td>Besi & Nikel padat</td></tr>
+            </tbody>
+        </table>
+
+        <div class="anak-soal">
+            <label>(a) Berdasarkan tabel, hitung total kedalaman Bumi dari permukaan hingga inti dalam. Tunjukkan cara hitungnya!</label>
+            <textarea id="s1_a" placeholder="Tuliskan analisis atau cara perhitungan kedalamannya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(b) Lapisan mana yang memiliki rentang suhu paling besar? Hitung selisih suhu maksimum dan minimumnya!</label>
+            <textarea id="s1_b" placeholder="Tulis nama lapisan beserta operasi pengurangan selisih suhunya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(c) Hitung persentase ketebalan Kerak Benua (70 km) terhadap total jari-jari Bumi (6.371 km)! Bulatkan ke 2 desimal.</label>
+            <textarea id="s1_c" placeholder="Tuliskan langkah perhitungan persentasenya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(d) Mengapa inti luar Bumi berwujud cair meskipun tekanannya sangat tinggi, sedangkan inti dalam berwujud padat? Jelaskan secara ilmiah!</label>
+            <textarea id="s1_d" placeholder="Jelaskan hubungan faktor suhu, tekanan, dan titik lebur material..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(e) Jika seseorang mengebor sumur sedalam 5 km di daratan, lapisan apa yang ditembus? Apa tantangan teknisnya berdasarkan data suhu pada tabel?</label>
+            <textarea id="s1_e" placeholder="Analisis lapisan yang ditembus beserta perkiraan kendala suhunya..."></textarea>
+        </div>
+    </div>
+
+    <div class="soal-card">
+        <div class="soal-header">
+            <span>Soal 2: Lempeng Tektonik & Pergerakan Kerak Bumi</span>
+            <span>20 Poin</span>
+        </div>
+        <div class="soal-teks">
+            Perhatikan tabel data lempeng tektonik utama di Bumi berikut ini:
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Lempeng</th>
+                    <th>Jenis</th>
+                    <th>Kec. Pergerakan (cm/thn)</th>
+                    <th>Batas Aktif Terdekat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Lempeng Pasifik</td><td>Samudra</td><td>7 – 11</td><td>Ring of Fire</td></tr>
+                <tr><td>Lempeng Eurasia</td><td>Benua</td><td>2 – 3</td><td>Mediterania, Himalaya</td></tr>
+                <tr><td>Lempeng Indo-Australia</td><td>Campuran</td><td>5 – 7</td><td>Palung Jawa, Himalaya</td></tr>
+                <tr><td>Lempeng Amerika Utara</td><td>Campuran</td><td>2 – 3</td><td>Sesar San Andreas</td></tr>
+                <tr><td>Lempeng Afrika</td><td>Campuran</td><td>2 – 4</td><td>Lembah Rift Afrika</td></tr>
+                <tr><td>Lempeng Antartika</td><td>Campuran</td><td>1 – 2</td><td>Punggung Sam. Hindia</td></tr>
+            </tbody>
+        </table>
+
+        <div class="anak-soal">
+            <label>(a) Lempeng mana yang bergerak paling cepat? Jika kecepatannya 10 cm/tahun, berapa meter dalam 1.000 tahun dan berapa km dalam 1 juta tahun?</label>
+            <textarea id="s2_a" placeholder="Tulis perhitungan konversi jarak per waktu ke meter dan kilometer..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(b) Indonesia berada di pertemuan Lempeng Eurasia, Indo-Australia, dan Pasifik. Mengapa posisi ini membuat Indonesia sangat rawan gempa dan gunung berapi? Jelaskan menggunakan konsep batas lempeng!</label>
+            <textarea id="s2_b" placeholder="Tuliskan penjelasan korelasi letak geologis Indonesia..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(c) Jelaskan perbedaan batas lempeng konvergen, divergen, dan transform! Berikan masing-masing 1 contoh nyata dari tabel!</label>
+            <textarea id="s2_c" placeholder="Tulis definisi tiap batas gerak lempeng beserta contoh lokasinya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(d) Pegunungan Himalaya terbentuk akibat tumbukan Lempeng Indo-Australia dengan Eurasia. Jika lempeng bergerak 6 cm/tahun, berapa tahun untuk menempuh jarak 1.200 km?</label>
+            <textarea id="s2_d" placeholder="Tuliskan konversi km ke cm dan pengerjaan waktu = jarak / kecepatan..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(e) Apa yang dimaksud dengan 'Ring of Fire'? Mengapa sebagian besar gempa dan gunung berapi aktif dunia terpusat di wilayah tersebut?</label>
+            <textarea id="s2_e" placeholder="Tulis penjelasan mengenai definisi cincin api pasifik..."></textarea>
+        </div>
+    </div>
+
+    <div class="soal-card">
+        <div class="soal-header">
+            <span>Soal 3: Gempa Bumi — Penyebab, Pengukuran & Dampak</span>
+            <span>20 Poin</span>
+        </div>
+        <div class="wacana-box">
+            "Pada 28 September 2018, gempa berkekuatan M 7,5 mengguncang Palu, Sulawesi Tengah. Gempa berpusat di kedalaman 10 km, disusul tsunami setinggi 6 meter yang menghancurkan pesisir Palu dalam hitungan menit. Lebih dari 4.000 jiwa meninggal dunia. Fenomena likuifaksi (tanah berperilaku seperti cairan) memperparah kerusakan di kawasan Petobo dan Balaroa. Gempa dipicu oleh Sesar Palu-Koro, salah satu sesar paling aktif di Indonesia."
+        </div>
+        <div class="anak-soal">
+            <label>(a) Jelaskan mengapa gempa di Palu bisa memicu tsunami! Faktor apa yang menentukan apakah sebuah gempa akan menghasilkan tsunami?</label>
+            <textarea id="s3_a" placeholder="Analisis mekanisme gempa palu dan syarat terjadinya tsunami secara umum..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(b) Apa yang dimaksud dengan likuifaksi? Jelaskan proses terjadinya dan mengapa sangat berbahaya bagi bangunan!</label>
+            <textarea id="s3_b" placeholder="Jelaskan proses hilangnya kekuatan geser tanah jenuh air akibat beban siklik gempa..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(c) Skala Richter bersifat logaritmik: setiap kenaikan 1 angka berarti energi meningkat 31,6 kali lipat. Gempa Palu M 7,5 vs M 5,5 — berapa kali lebih besar energinya? Tunjukkan perhitungannya!</label>
+            <textarea id="s3_c" placeholder="Tuliskan pengerjaan pangkat: 31,6 ^ (7,5 - 5,5)..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(d) Sebutkan 3 upaya mitigasi bencana gempa dan tsunami di kota pesisir. Jelaskan dasar ilmiah masing-masing!</label>
+            <textarea id="s3_d" placeholder="Tuliskan 3 aksi mitigasi di wilayah pantai beserta argumen ilmiahnya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(e) Mengapa gempa dangkal (&lt; 70 km) lebih merusak dibandingkan gempa dalam (&gt; 300 km) meskipun kekuatannya sama?</label>
+            <textarea id="s3_e" placeholder="Jelaskan berdasarkan pelemahan/atenuasi gelombang seismik terhadap jarak rambat..."></textarea>
+        </div>
+    </div>
+
+    <div class="soal-card">
+        <div class="soal-header">
+            <span>Soal 4: Gunung Berapi — Tipe Letusan & Dampak Global</span>
+            <span>20 Poin</span>
+        </div>
+        <div class="wacana-box">
+            "Gunung Tambora di Sumbawa, NTB meletus dahsyat pada April 1815 dengan Volcanic Explosivity Index (VEI) 7 — salah satu letusan terbesar dalam 10.000 tahun terakhir. Letusan memuntahkan ±150 km³ material vulkanik ke atmosfer, menyebabkan 'Tahun Tanpa Musim Panas' pada 1816. Suhu global turun 0,4–0,7°C akibat abu vulkanik menghalangi sinar matahari. Gagal panen terjadi di Eropa dan Amerika, menewaskan sekitar 90.000 jiwa secara langsung maupun kelaparan."
+        </div>
+        <div class="anak-soal">
+            <label>(a) Jelaskan proses terbentuknya magma di dalam Bumi dan mengapa magma bisa naik ke permukaan hingga terjadi letusan gunung berapi!</label>
+            <textarea id="s4_a" placeholder="Jelaskan faktor tekanan gas magmatik dan perbedaan densitas..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(b) Apa itu Volcanic Explosivity Index (VEI)? Jika VEI 6 melepaskan 10 km³ material, berapa estimasi material yang dilepas VEI 7 (Tambora) pada skala logaritmik?</label>
+            <textarea id="s4_b" placeholder="Jelaskan kelipatan volume material pada indeks berskala logaritmik basis 10..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(c) Jelaskan bagaimana abu vulkanik Tambora bisa menurunkan suhu global! Hubungkan dengan konsep radiasi matahari dan efek albedo!</label>
+            <textarea id="s4_c" placeholder="Tuliskan mekanisme pemantulan kembali radiasi matahari oleh aerosol sulfat/debu..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(d) Indonesia memiliki 127 gunung berapi aktif — terbanyak di dunia. Mengapa demikian? Hubungkan dengan posisi geografis Indonesia pada lempeng tektonik!</label>
+            <textarea id="s4_d" placeholder="Jelaskan mengenai zona subduksi (penunjaman) lempeng di wilayah Indonesia..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(e) Sebutkan dan jelaskan dua manfaat positif gunung berapi bagi kehidupan manusia!</label>
+            <textarea id="s4_e" placeholder="Tuliskan keuntungan vulkanisme (misal: kesuburan tanah, panas bumi, dll)..."></textarea>
+        </div>
+    </div>
+
+    <div class="soal-card">
+        <div class="soal-header">
+            <span>Soal 5: Ketidakseimbangan Bumi & Mitigasi Bencana (Studi Kasus)</span>
+            <span>20 Poin</span>
+        </div>
+        <div class="soal-teks">
+            Perhatikan data frekuensi bencana geologi di Indonesia berikut ini untuk menjawab anak soal:
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Jenis Bencana</th>
+                    <th>2019</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gempa Bumi</td><td>142</td><td>257</td><td>233</td><td>198</td></tr>
+                <tr><td>Letusan Gunung Api</td><td>15</td><td>28</td><td>22</td><td>19</td></tr>
+                <tr><td>Tanah Longsor</td><td>572</td><td>649</td><td>633</td><td>871</td></tr>
+                <tr><td>Tsunami</td><td>4</td><td>1</td><td>2</td><td>1</td></tr>
+            </tbody>
+        </table>
+
+        <div class="anak-soal">
+            <label>(a) Hitung total kejadian bencana geologi (semua jenis) per tahun dari 2019–2022. Tahun mana paling banyak bencana? Hitung rata-rata kejadian gempa per tahun!</label>
+            <textarea id="s5_a" placeholder="Tulis hasil penjumlahan total per tahun dan hitung nilai rata-rata gempanya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(b) Bencana apa yang mengalami tren kenaikan paling signifikan dari 2019 ke 2022? Hitung persentase kenaikannya! Apa penyebab utama tren tersebut?</label>
+            <textarea id="s5_b" placeholder="Tulis rumus persentase kenaikan: ((Akhir - Awal) / Awal) x 100% dan analisis pemicunya..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(c) Jelaskan kaitan antara pergerakan lempeng tektonik, gempa bumi, dan tanah longsor! Mengapa bencana-bencana ini sering terjadi bersamaan?</label>
+            <textarea id="s5_c" placeholder="Tulis analisis rantai sebab-akibat (bencana beruntun/collateral hazard)..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(d) Sebagai siswa SMK yang tinggal di Samarinda, Kalimantan Timur, apa langkah mitigasi pribadi yang bisa kamu lakukan? Jelaskan minimal 3 langkah beserta alasan ilmiahnya!</label>
+            <textarea id="s5_d" placeholder="Tuliskan 3 tindakan mitigasi kontekstual untuk wilayah tempat tinggal Anda..."></textarea>
+        </div>
+        <div class="anak-soal">
+            <label>(e) Teknologi apa saja yang digunakan ilmuwan untuk memprediksi dan memantau gunung berapi dan gempa bumi? Jelaskan cara kerja minimal 2 teknologi tersebut!</label>
+            <textarea id="s5_e" placeholder="Sebutkan alat instrumentasi (seperti Seismograf, Tiltmeter, atau GPS) beserta cara kerjanya..."></textarea>
+        </div>
+    </div>
+
+    <button onclick="kirimJawaban()">Kirim Jawaban ke Guru</button>
+    
+    <div id="status"></div>
+
+    <div class="footer-note">Jadilah generasi tangguh yang siap menghadapi bencana dengan ilmu pengetahuan! 🌋🌍</div>
+</div>
+
+<script>
+    // URL Web App dari Google Apps Script yang terhubung ke Google Sheets Anda
+    const URL_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbybyqTnU9JfPfEyKoZp0nDFRdPebWc8dOcbM-VQtWc3qO_EkRNzG4VUJJ9GbDE3BT5RwQ/exec";
+
+    function kirimJawaban() {
+        const nama = document.getElementById("namaSiswa").value.trim();
+        const kelas = document.getElementById("kelasSiswa").value.trim();
+        const statusDiv = document.getElementById("status");
+
+        // Validasi kolom nama dan kelas wajib diisi
+        if (!nama || !kelas) {
+            statusDiv.innerHTML = "❌ Harap isi Nama dan Kelas terlebih dahulu sebelum mengirim!";
+            statusDiv.style.backgroundColor = "#FFEBEE";
+            statusDiv.style.color = "#C62828";
+            return;
+        }
+
+        statusDiv.innerHTML = "⏳ Sedang mengirim jawaban, mohon tunggu...";
+        statusDiv.style.backgroundColor = "#FFF3E0";
+        statusDiv.style.color = "#EF6C00";
+
+        // Mengumpulkan seluruh jawaban dari form esai analitis-numerasi
+        const payload = {
+            nama: nama,
+            kelas: kelas,
+            // Menggabungkan sub-soal esai menjadi satu kesatuan string per baris kolom Sheets
+            jawaban1: `(a) ${document.getElementById("s1_a").value}\n\n(b) ${document.getElementById("s1_b").value}\n\n(c) ${document.getElementById("s1_c").value}\n\n(d) ${document.getElementById("s1_d").value}\n\n(e) ${document.getElementById("s1_e").value}`,
+            jawaban2: `(a) ${document.getElementById("s2_a").value}\n\n(b) ${document.getElementById("s2_b").value}\n\n(c) ${document.getElementById("s2_c").value}\n\n(d) ${document.getElementById("s2_d").value}\n\n(e) ${document.getElementById("s2_e").value}`,
+            jawaban3: `(a) ${document.getElementById("s3_a").value}\n\n(b) ${document.getElementById("s3_b").value}\n\n(c) ${document.getElementById("s3_c").value}\n\n(d) ${document.getElementById("s3_d").value}\n\n(e) ${document.getElementById("s3_e").value}`,
+            jawaban4: `(a) ${document.getElementById("s4_a").value}\n\n(b) ${document.getElementById("s4_b").value}\n\n(c) ${document.getElementById("s4_c").value}\n\n(d) ${document.getElementById("s4_d").value}\n\n(e) ${document.getElementById("s4_e").value}`,
+            jawaban5: `(a) ${document.getElementById("s5_a").value}\n\n(b) ${document.getElementById("s5_b").value}\n\n(c) ${document.getElementById("s5_c").value}\n\n(d) ${document.getElementById("s5_d").value}\n\n(e) ${document.getElementById("s5_e").value}`
+        };
+
+        // Mengirim data menggunakan POST Fetch API ke Google Sheets
+        fetch(URL_GOOGLE_SCRIPT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(() => {
+            statusDiv.innerHTML = "✅ Jawaban Tugas 4 berhasil dikirim! Tetap waspada dan terus belajar.";
+            statusDiv.style.backgroundColor = "#E8F5E9";
+            statusDiv.style.color = "#2E7D32";
+            
+            // Mengosongkan form pengerjaan setelah sukses kirim
+            document.querySelectorAll("textarea").forEach(textarea => textarea.value = "");
+            document.getElementById("namaSiswa").value = "";
+            document.getElementById("kelasSiswa").value = "";
+            window.scrollTo({top: 0, behavior: 'smooth'}); // Gulir halaman kembali ke atas otomatis
+        })
+        .catch(error => {
+            statusDiv.innerHTML = "❌ Terjadi kesalahan saat mengirim. Silakan periksa koneksi internet Anda.";
+            statusDiv.style.backgroundColor = "#FFEBEE";
+            statusDiv.style.color = "#C62828";
+            console.error(error);
+        });
+    }
+</script>
+
+</body>
+</html>
