@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedial Materi: Lapisan Inti Bumi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 min-h-screen py-10 px-4">
+
+    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+        <header class="border-b pb-4 mb-6 text-center">
+            <h1 class="text-3xl font-bold text-amber-600">Remedial: Karakteristik Inti Bumi</h1>
+            <p class="text-gray-500 mt-1">Jawablah pertanyaan essay mengenai struktur terdalam planet kita dengan analisis ilmiah</p>
+        </header>
+
+        <div class="mb-8 p-4 bg-amber-50/50 rounded-xl border border-amber-100 space-y-4">
+            <h2 class="text-md font-bold text-amber-900 tracking-wide uppercase">Identitas Siswa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap:</label>
+                    <input type="text" id="namaSiswa" placeholder="Ketik nama lengkap Anda" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas / No. Absen:</label>
+                    <input type="text" id="kelasSiswa" placeholder="Contoh: X TSM 1 / 15" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-container">
+            <div class="question-block mb-8 border-b pb-6">
+                <h3 class="text-lg font-semibold mb-3">1. Lapisan inti bumi terbagi menjadi dua bagian, yaitu inti luar (outer core) dan inti dalam (inner core). Jelaskan perbedaan mendasar dari kedua lapisan tersebut ditinjau dari wujud zat materi penyusunnya serta suhunya!</h3>
+                <div class="mt-2">
+                    <textarea id="q1" rows="4" placeholder="Ketikkan jawaban essay Anda di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-6">
+                <h3 class="text-lg font-semibold mb-3">2. Inti dalam Bumi diketahui memiliki suhu yang sangat ekstrem (mencapai sekitar 5.400°C) yang seharusnya mampu mencairkan segala jenis logam. Analisis lah mengapa inti dalam Bumi justru tetap berada dalam wujud padat!</h3>
+                <div class="mt-2">
+                    <textarea id="q2" rows="4" placeholder="Ketikkan jawaban essay Anda di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-6">
+                <h3 class="text-lg font-semibold mb-3">3. Lapisan inti luar Bumi tersusun atas lelehan besi dan nikel yang selalu bergerak aktif. Jelaskan bagaimana pergerakan fluida logam di inti luar ini dapat menciptakan medan magnet (geomagnetik) yang melindungi atmosfer Bumi!</h3>
+                <div class="mt-2">
+                    <textarea id="q3" rows="4" placeholder="Ketikkan jawaban essay Anda di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-6">
+                <h3 class="text-lg font-semibold mb-3">4. Manusia tidak pernah bisa melakukan pengeboran secara langsung hingga mencapai lapisan inti bumi karena keterbatasan teknologi dan suhu yang ekstrem. Bagaimana cara para ilmuwan geofisika mengetahui struktur, ketebalan, dan material yang ada di dalam inti bumi?</h3>
+                <div class="mt-2">
+                    <textarea id="q4" rows="4" placeholder="Ketikkan jawaban essay Anda di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-4">
+                <h3 class="text-lg font-semibold mb-3">5. Seiring berjalannya waktu miliaran tahun, inti dalam Bumi dilaporkan terus mengalami proses pembekuan lambat (kondensasi) karena hilangnya panas bumi secara bertahap. Analisis dampak jangka panjang yang akan terjadi pada kehidupan di permukaan Bumi jika seluruh inti dalam dan inti luar Bumi mendingin sepenuhnya serta membeku total!</h3>
+                <div class="mt-2">
+                    <textarea id="q5" rows="4" placeholder="Ketikkan jawaban essay Anda di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <div id="status-message" class="hidden mb-4 p-3 rounded-lg text-sm font-semibold text-center"></div>
+
+            <div class="text-center mt-6">
+                <button onclick="submitQuiz()" id="submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg shadow transition duration-200">
+                    Kirim Jawaban Essay
+                </button>
+            </div>
+        </div>
+
+        <div id="result-box" class="hidden mt-6 p-6 bg-green-50 border border-green-200 rounded-xl text-center">
+            <h2 class="text-2xl font-bold text-green-800 mb-2">Jawaban Berhasil Dikirim!</h2>
+            <p class="text-green-700 font-medium">Terima kasih, jawaban kuis essay materi Inti Bumi telah berhasil direkam di sistem cloud guru. Silakan tunggu pemeriksaan manual untuk penilaian.</p>
+        </div>
+    </div>
+
+    <script>
+        // URL Google Apps Script yang Anda berikan langsung dipasang di sini
+        const URL_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbybyqTnU9JfPfEyKoZp0nDFRdPebWc8dOcbM-VQtWc3qO_EkRNzG4VUJJ9GbDE3BT5RwQ/exec";
+
+        function submitQuiz() {
+            const nama = document.getElementById("namaSiswa").value.trim();
+            const kelas = document.getElementById("kelasSiswa").value.trim();
+            const statusMessage = document.getElementById("status-message");
+
+            const j1 = document.getElementById("q1").value.trim();
+            const j2 = document.getElementById("q2").value.trim();
+            const j3 = document.getElementById("q3").value.trim();
+            const j4 = document.getElementById("q4").value.trim();
+            const j5 = document.getElementById("q5").value.trim();
+
+            // Validasi Identitas
+            if (!nama || !kelas) {
+                alert("Harap isi Nama Lengkap dan Kelas/Absen terlebih dahulu!");
+                return;
+            }
+
+            // Validasi kelengkapan jawaban essay
+            if (!j1 || !j2 || !j3 || !j4 || !j5) {
+                alert("Harap lengkapi seluruh jawaban kuis essay sebelum mengirimkan!");
+                return;
+            }
+
+            // Tampilkan animasi pemrosesan
+            statusMessage.innerText = "⏳ Sedang memproses dan mentransfer jawaban essay Anda ke cloud...";
+            statusMessage.className = "block mb-4 p-3 bg-yellow-50 text-yellow-800 border border-yellow-200 rounded-lg text-sm font-semibold text-center";
+            document.getElementById('submit-btn').disabled = true;
+
+            // Payload dikirim menggunakan format nama variabel bawaan (jawaban1-jawaban5)
+            const payload = {
+                nama: nama,
+                kelas: kelas,
+                jawaban1: j1,
+                jawaban2: j2,
+                jawaban3: j3,
+                jawaban4: j4,
+                jawaban5: j5,
+                nilai: "Menunggu Koreksi Inti Bumi" // Penanda agar Anda mudah memfilter di Spreadsheet
+            };
+
+            fetch(URL_GOOGLE_SCRIPT, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                statusMessage.innerText = "✅ Pengiriman Sukses! Data tercatat di Google Sheets.";
+                statusMessage.className = "block mb-4 p-3 bg-green-50 text-green-800 border border-green-200 rounded-lg text-sm font-semibold text-center";
+                
+                // Mengunci elemen form setelah pengiriman berhasil
+                document.getElementById("q1").disabled = true;
+                document.getElementById("q2").disabled = true;
+                document.getElementById("q3").disabled = true;
+                document.getElementById("q4").disabled = true;
+                document.getElementById("q5").disabled = true;
+                document.getElementById("namaSiswa").disabled = true;
+                document.getElementById("kelasSiswa").disabled = true;
+
+                document.getElementById('result-box').classList.remove('hidden');
+                document.getElementById('submit-btn').classList.add('hidden');
+                document.getElementById('result-box').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                statusMessage.innerText = "⚠️ Jaringan sibuk atau gagal terhubung ke server cloud. Coba periksa koneksi internet Anda.";
+                statusMessage.className = "block mb-4 p-3 bg-red-50 text-red-800 border border-red-200 rounded-lg text-sm font-semibold text-center";
+                document.getElementById('submit-btn').disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>
