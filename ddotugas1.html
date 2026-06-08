@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedial DDO: Bedah Profesi Otomotif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 min-h-screen py-10 px-4">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+        <!-- HEADER -->
+        <header class="border-b-2 border-orange-100 pb-4 mb-6 text-center">
+            <h1 class="text-2xl font-bold text-orange-700 uppercase tracking-wide">Tugas Remedial</h1>
+            <h2 class="text-3xl font-extrabold text-gray-800 mt-1">Bedah Profesi: Menemukan Passion-mu di Dunia Otomotif</h2>
+            <p class="text-md font-medium text-gray-500 mt-2">Dasar-Dasar Otomotif (DDO) • Kelas X TSM • SMK Negeri 16 Samarinda</p>
+            <div class="flex flex-wrap justify-center gap-4 mt-3 text-sm text-gray-600 font-semibold bg-orange-50 w-fit mx-auto px-4 py-1.5 rounded-full border border-orange-100">
+                <span>Waktu: 75 Menit</span>
+                <span>•</span>
+                <span>Total Poin: 100 Poin</span>
+            </div>
+        </header>
+
+        <!-- INPUT IDENTITAS SISWA -->
+        <div class="mb-8 p-4 bg-orange-50/40 rounded-xl border border-orange-100 space-y-4">
+            <h3 class="text-md font-bold text-orange-900 tracking-wide uppercase">Identitas Siswa</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap:</label>
+                    <input type="text" id="namaSiswa" placeholder="Ketik nama lengkap Anda" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas / No. Absen:</label>
+                    <input type="text" id="kelasSiswa" placeholder="Contoh: X TSM 1 / 15" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Cita-cita Profesi Otomotif:</label>
+                    <input type="text" id="citaCita" placeholder="Contoh: Pengusaha Bengkel / Teknisi EV / Service Advisor" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
+                </div>
+            </div>
+        </div>
+
+        <!-- PETUNJUK -->
+        <div class="mb-8 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm space-y-2">
+            <h3 class="font-bold text-gray-700 uppercase tracking-wide">Petunjuk Pengerjaan:</h3>
+            <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                <li>Berdoalah sebelum mengerjakan.</li>
+                <li>Tuliskan identitas diri secara lengkap, termasuk cita-cita profesimu.</li>
+                <li>Jawab setiap soal secara lengkap, jujur, dan berdasarkan pemahaman pribadi.</li>
+                <li>Diperbolehkan menggunakan referensi buku, internet, atau pengalaman magang.</li>
+                <li>Jawaban harus ditulis dalam bahasamu sendiri — bukan menyalin.</li>
+                <li>Sertakan contoh nyata (bengkel, mekanik, atau tokoh) dalam setiap jawaban.</li>
+                <li>Waktu pengerjaan 75 menit. Kumpulkan tepat waktu.</li>
+            </ol>
+        </div>
+
+        <div id="quiz-container" class="space-y-10">
+            
+            <!-- SOAL 1 -->
+            <div class="question-block border-b pb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-gray-900">Soal 1: Peta Profesi Dunia Otomotif</h2>
+                    <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">20 Poin</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Perhatikan tabel profesi-profesi yang bisa digeluti lulusan SMK jurusan Teknik Sepeda Motor (TSM):</p>
+                
+                <!-- Tabel Data Soal 1 -->
+                <div class="overflow-x-auto mb-4 border rounded-lg">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b">
+                            <tr>
+                                <th class="px-4 py-2 border-r">Profesi</th>
+                                <th class="px-4 py-2 border-r">Tempat Kerja</th>
+                                <th class="px-4 py-2 border-r">Gaji Awal (Rp)</th>
+                                <th class="px-4 py-2">Kompetensi Kunci</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-gray-700">
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">Mekanik / Teknisi</td><td class="px-4 py-2 border-r">Bengkel AHASS, bengkel umum</td><td class="px-4 py-2 border-r">2.500.000 – 4.000.000</td><td class="px-4 py-2">Diagnosis kerusakan, servis berkala, bongkar pasang mesin</td></tr>
+                            <tr class="bg-gray-50"><td class="px-4 py-2 border-r font-medium">Service Advisor (SA)</td><td class="px-4 py-2 border-r">Dealer resmi, bengkel besar</td><td class="px-4 py-2 border-r">3.500.000 – 6.000.000</td><td class="px-4 py-2">Komunikasi pelanggan, analisa kerusakan, estimasi biaya</td></tr>
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">Quality Control (QC)</td><td class="px-4 py-2 border-r">Pabrik otomotif, Astra</td><td class="px-4 py-2 border-r">4.000.000 – 7.000.000</td><td class="px-4 py-2">Inspeksi produk, SOP kualitas, laporan teknis</td></tr>
+                            <tr class="bg-gray-50"><td class="px-4 py-2 border-r font-medium">Instruktur / Guru Teknik</td><td class="px-4 py-2 border-r">SMK, LPK, Politeknik</td><td class="px-4 py-2 border-r">3.500.000 – 6.500.000</td><td class="px-4 py-2">Penguasaan materi, pedagogi, komunikasi efektif</td></tr>
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">Pengusaha Bengkel</td><td class="px-4 py-2 border-r">Mandiri / franchise</td><td class="px-4 py-2 border-r">Tidak terbatas</td><td class="px-4 py-2">Manajemen bisnis, marketing, kepemimpinan, teknik</td></tr>
+                            <tr class="bg-gray-50"><td class="px-4 py-2 border-r font-medium">Sales Kendaraan</td><td class="px-4 py-2 border-r">Dealer motor/mobil</td><td class="px-4 py-2 border-r">3.000.000 + komisi</td><td class="px-4 py-2">Negosiasi, product knowledge, membangun relasi</td></tr>
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">Modifikator / Kustom</td><td class="px-4 py-2 border-r">Workshop custom, freelance</td><td class="px-4 py-2 border-r">Proyek-based</td><td class="px-4 py-2">Kreativitas, fabrikasi, desain, las, cat</td></tr>
+                            <tr class="bg-gray-50"><td class="px-4 py-2 border-r font-medium">Fleet Technician</td><td class="px-4 py-2 border-r">Perusahaan logistik, BUMN</td><td class="px-4 py-2 border-r">3.500.000 – 6.000.000</td><td class="px-4 py-2">Servis armada, preventive maintenance, laporan</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="space-y-3 text-sm font-medium text-gray-700">
+                    <p><strong>(a)</strong> Dari 8 profesi di tabel, pilih 2 profesi yang paling menarik bagimu. Jelaskan alasan pemilihanmu dan kompetensi apa dari pelajaran DDO yang sudah kamu kuasai untuk profesi tersebut!</p>
+                    <p><strong>(b)</strong> Profesi Service Advisor (SA) memerlukan kemampuan teknis sekaligus kemampuan komunikasi. Mengapa kedua kemampuan tersebut sama-sama penting? Berikan contoh situasi nyata di bengkel AHASS!</p>
+                    <p><strong>(c)</strong> Bandingkan profesi Mekanik/Teknisi dengan Pengusaha Bengkel dari sisi risiko, penghasilan, dan kebebasan kerja. Menurut kamu, mana yang lebih cocok dengan kepribadianmu? Jelaskan!</p>
+                    <p><strong>(d)</strong> Profesi Modifikator/Kustom semakin diminati di era media sosial. Mengapa? Apa hubungan antara kreativitas, skill teknik, dan passion dalam profesi ini?</p>
+                    <p><strong>(e)</strong> Jika kamu ingin menjadi Instruktur/Guru Teknik suatu hari nanti, langkah-langkah apa yang harus kamu siapkan mulai dari sekarang sebagai siswa kelas X TSM?</p>
+                </div>
+                <div class="mt-3">
+                    <textarea id="q1" rows="6" placeholder="Ketikkan seluruh jawaban esai Anda untuk poin (a) sampai (e) di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <!-- SOAL 2 -->
+            <div class="question-block border-b pb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-gray-900">Soal 2: Passion, Bakat & Kepribadian dalam Karir Otomotif</h2>
+                    <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">20 Poin</span>
+                </div>
+                <div class="bg-gray-50 border p-4 rounded-lg text-sm text-gray-700 leading-relaxed mb-4">
+                    <strong>Wacana:</strong><br>
+                    Reza, siswa kelas XI TSM, sangat suka otak-atik motor sejak SMP. Ia bisa berjam-jam di bengkel tanpa merasa lelah. Nilai praktiknya selalu tinggi, tapi nilai teori sering pas-pasan karena ia lebih suka langsung mencoba daripada membaca buku. Teman-temannya sering minta bantuan saat motor mereka bermasalah. Namun, Reza belum yakin mau kerja di bengkel, buka usaha, atau melanjutkan ke politeknik. Ia bingung mana yang sesuai dengan dirinya.
+                </div>
+
+                <div class="space-y-3 text-sm font-medium text-gray-700">
+                    <p><strong>(a)</strong> Berdasarkan cerita Reza, identifikasi minimal 3 tanda bahwa otomotif adalah passion-nya! Jelaskan masing-masing tanda tersebut berdasarkan ciri-ciri passion yang sesungguhnya!</p>
+                    <p><strong>(b)</strong> Reza punya kelemahan di teori. Apakah kelemahan ini bisa menghambat karirnya di dunia otomotif? Bagaimana cara mengatasi kelemahan tersebut tanpa harus meninggalkan kelebihan yang dimilikinya?</p>
+                    <p><strong>(c)</strong> Apa perbedaan antara passion, bakat (talent), dan minat (interest)? Berikan contoh masing-masing dari konteks dunia otomotif!</p>
+                    <p><strong>(d)</strong> Jika kamu adalah konselor Reza, profesi otomotif apa yang paling kamu rekomendasikan untuknya? Jelaskan alasanmu berdasarkan kepribadian dan kemampuan yang terlihat dalam cerita!</p>
+                    <p><strong>(e)</strong> Tuliskan passion-mu sendiri di bidang otomotif: apa yang paling kamu sukai, apa yang ingin kamu kuasai, dan profesi apa yang paling sesuai dengan dirimu? Jelaskan secara jujur!</p>
+                </div>
+                <div class="mt-3">
+                    <textarea id="q2" rows="6" placeholder="Ketikkan seluruh jawaban esai Anda untuk poin (a) sampai (e) di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <!-- SOAL 3 -->
+            <div class="question-block border-b pb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-gray-900">Soal 3: Numerasi Gaji, Investasi Pendidikan & Proyeksi Karir</h2>
+                    <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">20 Poin</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Perhatikan tabel proyeksi penghasilan profesi di dunia otomotif berikut:</p>
+
+                <!-- Tabel Data Soal 3 -->
+                <div class="overflow-x-auto mb-4 border rounded-lg">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b">
+                            <tr>
+                                <th class="px-4 py-2 border-r">Profesi</th>
+                                <th class="px-4 py-2 border-r">Gaji Entry Level</th>
+                                <th class="px-4 py-2 border-r">Gaji 5 Thn</th>
+                                <th class="px-4 py-2 border-r">Gaji 10 Thn</th>
+                                <th class="px-4 py-2">Prospek 2030</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-gray-700">
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">Mekanik senior</td><td class="px-4 py-2 border-r">Rp 3,5 jt</td><td class="px-4 py-2 border-r">Rp 6 jt</td><td class="px-4 py-2 border-r">Rp 9 jt</td><td class="px-4 py-2">Tinggi (EV era)</td></tr>
+                            <tr class="bg-gray-50"><td class="px-4 py-2 border-r font-medium">Service Advisor</td><td class="px-4 py-2 border-r">Rp 4 jt</td><td class="px-4 py-2 border-r">Rp 8 jt</td><td class="px-4 py-2 border-r">Rp 12 jt</td><td class="px-4 py-2">Sangat Tinggi</td></tr>
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">QC Pabrik</td><td class="px-4 py-2 border-r">Rp 5 jt</td><td class="px-4 py-2 border-r">Rp 9 jt</td><td class="px-4 py-2 border-r">Rp 15 jt</td><td class="px-4 py-2">Tinggi</td></tr>
+                            <tr class="bg-gray-50"><td class="px-4 py-2 border-r font-medium">Pengusaha Bengkel</td><td class="px-4 py-2 border-r">Rp 5 jt</td><td class="px-4 py-2 border-r">Rp 20 jt+</td><td class="px-4 py-2 border-r">Tak terbatas</td><td class="px-4 py-2">Sangat Tinggi</td></tr>
+                            <tr class="bg-white"><td class="px-4 py-2 border-r font-medium">Teknisi EV</td><td class="px-4 py-2 border-r">Rp 5 jt</td><td class="px-4 py-2 border-r">Rp 12 jt</td><td class="px-4 py-2 border-r">Rp 20 jt+</td><td class="px-4 py-2">Sangat Tinggi</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="space-y-3 text-sm font-medium text-gray-700">
+                    <p><strong>(a)</strong> Jika seorang mekanik senior mulai bekerja dengan gaji Rp 3.500.000/bulan dan naik rata-rata 8% per tahun, berapa gajinya setelah 5 tahun? Tunjukkan perhitungan lengkapnya!</p>
+                    <p><strong>(b)</strong> Biaya kursus teknisi EV (Electric Vehicle) adalah Rp 8.000.000. Jika setelah kursus gaji naik dari Rp 4.000.000 menjadi Rp 5.500.000/bulan, berapa bulan waktu yang dibutuhkan untuk balik modal?</p>
+                    <p><strong>(c)</strong> Seorang pengusaha bengkel memiliki omzet Rp 35.000.000/bulan dengan biaya operasional (sewa, gaji karyawan, spare part) Rp 22.000.000. Berapa keuntungan bersih per bulan dan per tahun? Berapa persen margin keuntungannya?</p>
+                    <p><strong>(d)</strong> Berdasarkan tabel, profesi mana yang menunjukkan kenaikan gaji terbesar antara entry level dan 10 tahun pengalaman? Hitung persentase kenaikannya! Apa yang menyebabkan kenaikan tersebut?</p>
+                    <p><strong>(e)</strong> Jika kamu bercita-cita membuka bengkel sendiri dalam 7 tahun dan membutuhkan modal Rp 150.000.000, berapa rupiah yang harus kamu tabung per bulan dari sekarang (tidak ada bunga)? Strategi apa yang bisa kamu lakukan untuk mencapai target lebih cepat?</p>
+                </div>
+                <div class="mt-3">
+                    <textarea id="q3" rows="6" placeholder="Tuliskan analisis perhitungan numerasi Anda (Diketahui, Ditanya, Penyelesaian) secara lengkap untuk poin (a) sampai (e) di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition resize-y font-mono text-sm bg-gray-50"></textarea>
+                </div>
+            </div>
+
+            <!-- SOAL 4 -->
+            <div class="question-block border-b pb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-gray-900">Soal 4: Tren Industri Otomotif & Adaptasi Profesi</h2>
+                    <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">20 Poin</span>
+                </div>
+                <div class="bg-gray-50 border p-4 rounded-lg text-sm text-gray-700 leading-relaxed mb-4">
+                    <strong>Wacana Industri Otomotif:</strong><br>
+                    Industri otomotif Indonesia sedang memasuki era transformasi besar. Pemerintah menargetkan 2 juta unit kendaraan listrik (EV) terjual per tahun pada 2030. Produsen besar seperti Honda, Yamaha, Toyota, dan Polytron sudah meluncurkan motor/mobil listrik di pasar Indonesia. Di sisi lain, kendaraan berbahan bakar bensin masih mendominasi dengan lebih dari 120 juta unit beroperasi di seluruh Indonesia. Teknologi kendaraan makin kompleks: sensor elektronik, sistem injeksi, ABS, hingga konektivitas IoT sudah menjadi standar kendaraan baru. Mekanik yang hanya bisa servis karburator motor lama akan kesulitan bersaing jika tidak terus belajar.
+                </div>
+
+                <div class="space-y-3 text-sm font-medium text-gray-700">
+                    <p><strong>(a)</strong> Berdasarkan wacana, jelaskan minimal 3 perubahan besar yang terjadi di industri otomotif Indonesia! Bagaimana perubahan ini mempengaruhi kebutuhan kompetensi mekanik masa depan?</p>
+                    <p><strong>(b)</strong> Teknisi EV memiliki keahlian berbeda dari mekanik konvensional. Jelaskan perbedaan utama antara merawat kendaraan bensin dan kendaraan listrik dari sisi sistem mekanik dan elektrikalnya!</p>
+                    <p><strong>(c)</strong> Jika kamu adalah mekanik bengkel umum yang sudah bekerja 3 tahun, apa langkah konkret yang akan kamu ambil untuk beradaptasi dengan era EV? Buat rencana upgrade skill dalam 2 tahun!</p>
+                    <p><strong>(d)</strong> Apakah era kendaraan listrik mengancam atau justru membuka peluang bagi lulusan SMK TSM? Berikan argumen yang seimbang (pro dan kontra) dengan masing-masing minimal 2 poin!</p>
+                    <p><strong>(e)</strong> Selain skill teknis, soft skill apa yang menurutmu paling penting untuk sukses di industri otomotif yang terus berubah ini? Jelaskan 3 soft skill beserta alasan dan cara mengembangkannya!</p>
+                </div>
+                <div class="mt-3">
+                    <textarea id="q4" rows="6" placeholder="Ketikkan seluruh jawaban esai Anda untuk poin (a) sampai (e) di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <!-- SOAL 5 -->
+            <div class="question-block pb-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-gray-900">Soal 5: Refleksi Diri & Rencana Karir Otomotif</h2>
+                    <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">20 Poin</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">Soal ini mengajakmu untuk jujur mengenal diri sendiri dan merancang masa depanmu. Jawablah dengan sungguh-sungguh — tidak ada jawaban yang salah selama jujur!</p>
+
+                <div class="space-y-3 text-sm font-medium text-gray-700">
+                    <p><strong>(a) KEKUATAN & KELEMAHAN:</strong> Tuliskan 3 kekuatan dan 3 kelemahanmu yang berhubungan dengan dunia otomotif. Untuk setiap kelemahan, tuliskan 1 langkah konkret yang akan kamu lakukan untuk memperbaikinya!</p>
+                    <p><strong>(b) ROLE MODEL:</strong> Sebutkan 1 tokoh (mekanik, pengusaha otomotif, atau instruktur) yang menginspirasimu — bisa orang terkenal, tetangga, atau keluarga. Ceritakan apa yang bisa kamu pelajari dari perjalanan hidupnya!</p>
+                    <p><strong>(c) RENCANA 5 TAHUN:</strong> Buat rencana karir otomotifmu dari sekarang (kelas X) hingga 5 tahun ke depan secara rinci:<br>
+                    • Kelas X – XII : Target kompetensi apa yang ingin dikuasai?<br>
+                    • Lulus SMK : Pilihan pertama (kerja / kuliah / wirausaha)? Mengapa?<br>
+                    • 1–3 tahun : Di mana dan sebagai apa kamu ingin bekerja?<br>
+                    • 5 tahun : Target karir / usaha / penghasilan yang ingin dicapai?</p>
+                    <p><strong>(d) HAMBATAN & SOLUSI:</strong> Apa hambatan terbesar yang mungkin menghalangi kamu mencapai cita-cita profesi otomotifmu? Jelaskan hambatan tersebut dan strategi nyata yang akan kamu gunakan untuk mengatasinya!</p>
+                    <p><strong>(e) KOMITMEN:</strong> Tuliskan satu paragraf pernyataan komitmen dirimu kepada diri sendiri — apa yang akan kamu lakukan berbeda mulai BESOK untuk lebih serius mengejar passion-mu di dunia otomotif. Ketikkan pula nama lengkap Anda di akhir paragraf sebagai pengganti tanda tangan elektronik!</p>
+                </div>
+                <div class="mt-3">
+                    <textarea id="q5" rows="6" placeholder="Ketikkan refleksi dan pernyataan komitmen diri Anda di sini..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition resize-y"></textarea>
+                </div>
+            </div>
+
+            <!-- STATUS LIVE NOTIFIKASI PENGIRIMAN -->
+            <div id="status-message" class="hidden p-3 rounded-lg text-sm font-semibold text-center"></div>
+
+            <div class="text-center pt-2">
+                <button onclick="submitQuiz()" id="submit-btn" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow transition duration-200">
+                    Kirim Jawaban Tugas Bedah Profesi
+                </button>
+            </div>
+        </div>
+
+        <!-- BOX SELESAI -->
+        <div id="result-box" class="hidden mt-6 p-6 bg-green-50 border border-green-200 rounded-xl text-center">
+            <h2 class="text-2xl font-bold text-green-800 mb-2">Jawaban Berhasil Direkam!</h2>
+            <p class="text-green-700 font-medium">“Mulailah dari passion-mu, kuasai skill-mu, dan jadilah yang terbaik di bidangmu!” 🔧🌟<br><span class="text-xs text-gray-500 block mt-2">Data tugas remedial Anda telah berhasil diunggah ke Google Sheets.</span></p>
+        </div>
+    </div>
+
+    <script>
+        // URL Apps Script Anda disesuaikan secara otomatis sesuai instruksi
+        const URL_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbybyqTnU9JfPfEyKoZp0nDFRdPebWc8dOcbM-VQtWc3qO_EkRNzG4VUJJ9GbDE3BT5RwQ/exec";
+
+        function submitQuiz() {
+            const nama = document.getElementById("namaSiswa").value.trim();
+            const kelas = document.getElementById("kelasSiswa").value.trim();
+            const citaCita = document.getElementById("citaCita").value.trim();
+            const statusMessage = document.getElementById("status-message");
+
+            const j1 = document.getElementById("q1").value.trim();
+            const j2 = document.getElementById("q2").value.trim();
+            const j3 = document.getElementById("q3").value.trim();
+            const j4 = document.getElementById("q4").value.trim();
+            const j5 = document.getElementById("q5").value.trim();
+
+            // Validasi Identitas[cite: 4]
+            if (!nama || !kelas || !citaCita) {
+                alert("Harap isi Nama, Kelas/Absen, dan Cita-cita Profesi Anda terlebih dahulu!");
+                return;
+            }
+
+            // Validasi Kelengkapan Esai
+            if (!j1 || !j2 || !j3 || !j4 || !j5) {
+                alert("Harap isi seluruh jawaban esai (Soal 1 s.d Soal 5) sebelum mengirimkan tugas!");
+                return;
+            }
+
+            // Animasi Loading
+            statusMessage.innerText = "⏳ Sedang memproses dan mengirimkan berkas analisis profesi Anda ke cloud...";
+            statusMessage.className = "block p-3 bg-yellow-50 text-yellow-800 border border-yellow-200 rounded-lg text-sm font-semibold text-center";
+            document.getElementById('submit-btn').disabled = true;
+
+            // Menggabungkan identitas cita-cita ke dalam payload data[cite: 4]
+            const payload = {
+                nama: nama + " (Cita-cita: " + citaCita + ")",
+                kelas: kelas,
+                jawaban1: j1,
+                jawaban2: j2,
+                jawaban3: j3,
+                jawaban4: j4,
+                jawaban5: j5,
+                nilai: "Menunggu Koreksi Bedah Profesi" // Penanda sortir otomatis untuk guru di Spreadsheet
+            };
+
+            fetch(URL_GOOGLE_SCRIPT, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                statusMessage.innerText = "✅ Berhasil Mengirim! Jawaban Anda telah tersimpan dengan aman di server cloud Guru.";
+                statusMessage.className = "block p-3 bg-green-50 text-green-800 border border-green-200 rounded-lg text-sm font-semibold text-center";
+                
+                // Kunci seluruh input pasca pengiriman sukses
+                document.getElementById("namaSiswa").disabled = true;
+                document.getElementById("kelasSiswa").disabled = true;
+                document.getElementById("citaCita").disabled = true;
+                document.getElementById("q1").disabled = true;
+                document.getElementById("q2").disabled = true;
+                document.getElementById("q3").disabled = true;
+                document.getElementById("q4").disabled = true;
+                document.getElementById("q5").disabled = true;
+
+                document.getElementById('result-box').classList.remove('hidden');
+                document.getElementById('submit-btn').classList.add('hidden');
+                document.getElementById('result-box').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                statusMessage.innerText = "⚠️ Jaringan sibuk atau server tidak merespon. Silakan periksa koneksi internet Anda dan coba lagi.";
+                statusMessage.className = "block p-3 bg-red-50 text-red-800 border border-red-200 rounded-lg text-sm font-semibold text-center";
+                document.getElementById('submit-btn').disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>
