@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedial Materi Tata Surya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 min-h-screen py-10 px-4">
+
+    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+        <header class="border-b pb-4 mb-6 text-center">
+            <h1 class="text-3xl font-bold text-indigo-600">Remedial Tata Surya</h1>
+            <p class="text-gray-500 mt-1">Uji kembali pemahamanmu mengenai sistem kosmos kita</p>
+        </header>
+
+        <div class="mb-8 p-4 bg-indigo-50/50 rounded-xl border border-indigo-100 space-y-4">
+            <h2 class="text-md font-bold text-indigo-900 tracking-wide uppercase">Identitas Siswa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap:</label>
+                    <input type="text" id="namaSiswa" placeholder="Ketik nama lengkap Anda" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas / No. Absen:</label>
+                    <input type="text" id="kelasSiswa" placeholder="Contoh: X TSM 1 / 15" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-container">
+            <div class="question-block mb-8 border-b pb-6" data-q="1">
+                <h3 class="text-lg font-semibold mb-3">1. Mengapa planet-planet di Tata Surya dapat tetap berada pada orbitnya masing-masing saat mengelilingi Matahari?</h3>
+                <div class="space-y-2 options-group">
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q1" value="A" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Adanya gaya gravitasi Matahari yang seimbang dengan gaya sentrifugal planet.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q1" value="B" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Adanya lapisan atmosfer tebal yang menahan posisi setiap planet.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q1" value="C" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Adanya gaya magnet kuat yang dipancarkan oleh inti Matahari.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q1" value="D" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Planet-planet saling tolak-menolak karena memiliki muatan listrik yang sama.</span>
+                    </label>
+                </div>
+                <div class="rationale hidden mt-3 p-3 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-lg text-sm">
+                    <strong>Pembahasan:</strong> Gaya gravitasi Matahari menarik planet, sementara gerakan maju planet menghasilkan efek sentrifugal yang menjaga planet tetap berada di jalurnya.
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-6" data-q="2">
+                <h3 class="text-lg font-semibold mb-3">2. Kelompok planet di bawah ini yang semuanya termasuk ke dalam kategori Planet Dalam (Terestrial) adalah...</h3>
+                <div class="space-y-2 options-group">
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q2" value="A" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Merkurius, Venus, Bumi, dan Mars.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q2" value="B" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Merkurius, Venus, Mars, dan Jupiter.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q2" value="C" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Bumi, Mars, Jupiter, dan Saturnus.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q2" value="D" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Mars, Jupiter, Saturnus, dan Uranus.</span>
+                    </label>
+                </div>
+                <div class="rationale hidden mt-3 p-3 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-lg text-sm">
+                    <strong>Pembahasan:</strong> Planet-planet ini berada di sebelah dalam sabuk asteroid dan memiliki permukaan padat yang tersusun dari batuan.
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-6" data-q="3">
+                <h3 class="text-lg font-semibold mb-3">3. Hukum Kepler menyatakan bahwa orbit planet berbentuk elips. Berdasarkan Hukum II Kepler, apa yang terjadi pada kecepatan revolusi planet ketika berada di titik perihelion (titik terdekat dengan Matahari)?</h3>
+                <div class="space-y-2 options-group">
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q3" value="A" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Kecepatan revolusi planet mencapai titik maksimum (paling cepat).</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q3" value="B" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Kecepatan revolusi planet mencapai titik minimum (paling lambat).</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q3" value="C" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Kecepatan revolusi planet menjadi konstan dan tidak berubah.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q3" value="D" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Planet berhenti berotasi untuk sementara waktu.</span>
+                    </label>
+                </div>
+                <div class="rationale hidden mt-3 p-3 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-lg text-sm">
+                    <strong>Pembahasan:</strong> Berdasarkan Hukum II Kepler, garis hubung planet-Matahari menyapu luas yang sama dalam waktu yang sama, sehingga planet bergerak lebih cepat saat dekat dengan sumber gravitasi (perihelion).
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-6" data-q="4">
+                <h3 class="text-lg font-semibold mb-3">4. Venus sering disebut sebagai planet paling panas di Tata Surya, bahkan mengalahkan Merkurius yang jaraknya lebih dekat ke Matahari. Fenomena utama apa yang menyebabkan hal ini?</h3>
+                <div class="space-y-2 options-group">
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q4" value="A" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Efek rumah kaca yang ekstrem akibat atmosfer tebal yang kaya karbon dioksida.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q4" value="B" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Banyaknya aktivitas badai matahari yang langsung mengenai permukaan Venus.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q4" value="C" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Jarak Venus yang selalu berubah-ubah akibat orbitnya yang sangat lonjong.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q4" value="D" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Venus tidak memiliki medan magnet untuk memantulkan panas.</span>
+                    </label>
+                </div>
+                <div class="rationale hidden mt-3 p-3 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-lg text-sm">
+                    <strong>Pembahasan:</strong> Atmosfer Venus memerangkap panas radiasi Matahari secara besar-besaran (efek rumah kaca), menciptakan suhu permukaan yang sangat tinggi.
+                </div>
+            </div>
+
+            <div class="question-block mb-8 border-b pb-4" data-q="5">
+                <h3 class="text-lg font-semibold mb-3">5. Manakah pernyataan berikut yang dengan tepat menjelaskan perbedaan antara meteoroid, meteor, dan meteorit?</h3>
+                <div class="space-y-2 options-group">
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q5" value="A" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Meteoroid berada di luar angkasa, meteor adalah gesekan batuan di atmosfer, dan meteorit adalah batuan yang berhasil mencapai permukaan bumi.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q5" value="B" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Meteoroid adalah batuan besar, meteor adalah batuan sedang, dan meteorit adalah debu sisa.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q5" value="C" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Meteoroid adalah bintang jatuh, meteor adalah asteroid kecil, dan meteorit adalah ekor komet.</span>
+                    </label>
+                    <label class="flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition">
+                        <input type="radio" name="q5" value="D" class="mt-1 mr-3 text-indigo-600 focus:ring-indigo-500">
+                        <span>Meteorit berada di sabuk asteroid, meteoroid mendekati bumi, dan meteor terbakar habis tanpa sisa.</span>
+                    </label>
+                </div>
+                <div class="rationale hidden mt-3 p-3 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-lg text-sm">
+                    <strong>Pembahasan:</strong> Penamaan ketiga istilah tersebut murni didasarkan pada posisi atau lokasi batuan luar angkasa tersebut saat diamati (luar angkasa -> atmosfer -> tanah).
+                </div>
+            </div>
+
+            <div id="status-message" class="hidden mb-4 p-3 rounded-lg text-sm font-semibold text-center"></div>
+
+            <div class="text-center mt-6">
+                <button onclick="checkAnswers()" id="submit-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow transition duration-200">
+                    Kirim Jawaban
+                </button>
+            </div>
+        </div>
+
+        <div id="result-box" class="hidden mt-6 p-6 bg-gray-50 border rounded-xl text-center">
+            <h2 class="text-2xl font-bold mb-2">Hasil Remedial Anda</h2>
+            <div class="text-5xl font-extrabold text-indigo-600 my-4" id="score-display">0 / 100</div>
+            <p id="feedback-text" class="text-gray-600 font-medium mb-4"></p>
+            <button onclick="resetQuiz()" class="text-sm text-indigo-600 hover:text-indigo-800 font-semibold underline">
+                Coba Lagi
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // MASUKKAN URL WEB APP APPS SCRIPT PERTAMA ANDA DI SINI
+        const URL_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbybyqTnU9JfPfEyKoZp0nDFRdPebWc8dOcbM-VQtWc3qO_EkRNzG4VUJJ9GbDE3BT5RwQ/exec";
+
+        const correctAnswers = {
+            q1: "A",
+            q2: "A",
+            q3: "A",
+            q4: "A",
+            q5: "A"
+        };
+
+        function checkAnswers() {
+            const nama = document.getElementById("namaSiswa").value.trim();
+            const kelas = document.getElementById("kelasSiswa").value.trim();
+            const statusMessage = document.getElementById("status-message");
+
+            if (!nama || !kelas) {
+                alert("Harap isi Nama Lengkap dan Kelas/Absen terlebih dahulu!");
+                return;
+            }
+
+            let score = 0;
+            let totalQuestions = 5;
+            let answeredCount = 0;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const checkedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (checkedOption) answeredCount++;
+            }
+
+            if (answeredCount < totalQuestions) {
+                alert("Harap jawab semua soal sebelum mengirimkan!");
+                return;
+            }
+
+            statusMessage.innerText = "⏳ Sedang memproses dan mengirimkan jawaban Anda...";
+            statusMessage.className = "block mb-4 p-3 bg-yellow-50 text-yellow-800 border border-yellow-200 rounded-lg text-sm font-semibold text-center";
+            document.getElementById('submit-btn').disabled = true;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionBlock = document.querySelector(`.question-block[data-q="${i}"]`);
+                const checkedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                const labels = questionBlock.querySelectorAll('.options-group label');
+                
+                questionBlock.querySelector('.rationale').classList.remove('hidden');
+
+                labels.forEach(label => {
+                    const input = label.querySelector('input');
+                    input.disabled = true; 
+
+                    if (input.value === correctAnswers[`q${i}`]) {
+                        label.className = "flex items-start p-3 bg-green-50 border border-green-500 text-green-900 rounded-lg transition";
+                    }
+                    
+                    if (checkedOption && checkedOption.value === input.value && input.value !== correctAnswers[`q${i}`]) {
+                        label.className = "flex items-start p-3 bg-red-50 border border-red-500 text-red-900 rounded-lg transition";
+                    }
+                });
+
+                if (checkedOption && checkedOption.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            const finalScore = (score / totalQuestions) * 100;
+
+            // VARIABEL DIKEMBALIKAN MENJADI JAWABAN1-JAWABAN5 SESUAI STRUKTUR AWAL
+            const payload = {
+                nama: nama,
+                kelas: kelas,
+                jawaban1: document.querySelector('input[name="q1"]:checked').value,
+                jawaban2: document.querySelector('input[name="q2"]:checked').value,
+                jawaban3: document.querySelector('input[name="q3"]:checked').value,
+                jawaban4: document.querySelector('input[name="q4"]:checked').value,
+                jawaban5: document.querySelector('input[name="q5"]:checked').value,
+                nilai: finalScore
+            };
+
+            fetch(URL_GOOGLE_SCRIPT, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                statusMessage.innerText = "✅ Jawaban berhasil direkam di Google Sheets!";
+                statusMessage.className = "block mb-4 p-3 bg-green-50 text-green-800 border border-green-200 rounded-lg text-sm font-semibold text-center";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                statusMessage.innerText = "⚠️ Jawaban diperiksa secara lokal, namun gagal terkirim ke server cloud.";
+                statusMessage.className = "block mb-4 p-3 bg-orange-50 text-orange-800 border border-orange-200 rounded-lg text-sm font-semibold text-center";
+            });
+
+            document.getElementById('score-display').innerText = finalScore;
+            const feedbackText = document.getElementById('feedback-text');
+            if (finalScore === 100) {
+                feedbackText.innerText = "Sempurna! Kamu sudah memahami materi Tata Surya dengan sangat baik.";
+                feedbackText.className = "text-green-600 font-medium mb-4";
+            } else if (finalScore >= 70) {
+                feedbackText.innerText = "Bagus! Kamu sudah lulus remedial ini.";
+                feedbackText.className = "text-indigo-600 font-medium mb-4";
+            } else {
+                feedbackText.innerText = "Jangan berkecil hati. Pelajari pembahasannya di atas dan coba lagi!";
+                feedbackText.className = "text-red-600 font-medium mb-4";
+            }
+
+            document.getElementById('result-box').classList.remove('hidden');
+            document.getElementById('submit-btn').classList.add('hidden');
+            document.getElementById('result-box').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            document.getElementById('result-box').classList.add('hidden');
+            document.getElementById('submit-btn').classList.remove('hidden');
+            document.getElementById('submit-btn').disabled = false;
+            document.getElementById('status-message').classList.add('hidden');
+
+            const inputs = document.querySelectorAll('input[type="radio"]');
+            inputs.forEach(input => {
+                input.checked = false;
+                input.disabled = false;
+            });
+
+            const labels = document.querySelectorAll('.options-group label');
+            labels.forEach(label => {
+                label.className = "flex items-start p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 border border-transparent transition";
+            });
+
+            const rationales = document.querySelectorAll('.rationale');
+            rationales.forEach(rat => rat.classList.add('hidden'));
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
